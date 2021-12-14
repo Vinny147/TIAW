@@ -1,0 +1,66 @@
+*{
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(50deg,#a259e2,#010a2e);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width:100vw ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login{
+    background: white;
+    max-width: 350px;
+    min-height: 40vh;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    width: 800px;
+}
+
+.loginTitle{
+    margin-bottom: 2rem;
+    position: relative;
+    font-weight: 600;
+}
+
+.loginTitle::before{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 25px;
+    bottom: 3px;
+    left: 0;
+    border-radius: 8px;
+    background: linear-gradient(45deg,#8e2de2,#2a3e94);
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.btns{
+    background: linear-gradient(to right,#8a3ebd,#4146A6);
+    border-radius: 4px;
+    padding:0.4rem;
+    font-size: 0.75rem;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.btns:focus{
+    outline: none;
+    border: none;
+}

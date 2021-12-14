@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('../dashboard/styles/db-default.css');
+@import url('../aside/aside.css');
+
+h5 {
+    margin: 0;
+}
+
+#mainContent {
+    padding: 5px;
+}
+
+.config-container {
+    width: 1000px;
+    margin: 50px auto 5px auto;
+    padding: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.config-container h4 {
+    text-align: center;
+}
+
+#h4num1 {
+    display: none;
+}
+
+.config-img-perfil {
+    width: 286px;
+    margin-right: 34px;
+}
+
+#cfgImg {
+    object-fit:cover;
+}
+
+.config-input-footer {
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.config-input-footer .btn {
+    color: #fff;
+    background-color: #4146A6;
+    outline-color: #4146A6;
+}
+
+#btnTesteAlarmePlay, #btnTesteAlarmePause  {
+    background-color: #4146A6;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#btnTesteAlarmePlay i, #btnTesteAlarmePause i {
+    font-size: 24px;
+    color: #fff;
+}
+
+.teste-alarme {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+}
+
+#cfgAviso1, #cfgAviso2 {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    color: red;
+    text-align: center;
+    background-color: #e9ecef;
+    border-radius: 4px;
+}
+
+#cfgLoop {
+    display: block;
+    margin: 7px auto;
+}
+
+@media screen and (max-width: 1340px) {
+    .config-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    .config-img-perfil {
+        margin: 0;
+    }
+
+    #h4num2 {
+        display: none;
+    }
+
+    #h4num1 {
+        display: block;
+        margin: 20px auto;
+    }
+
+    .teste-alarme {
+        justify-content: flex-start;
+    }
+
+    #btnTesteAlarmePlay {
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    #mainContent {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .row {
+        display: block;
+    }
+
+    #btnTesteAlarmePlay, #btnTesteAlarmePause {
+        margin: 10px 75% 0 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .teste-alarme {
+        flex-direction: column;
+    }
+
+    #cfgLoop {
+        margin: 7px auto 7px 7px;
+    }
+}

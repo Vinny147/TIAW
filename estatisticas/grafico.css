@@ -1,0 +1,79 @@
+.botoes-troca-grafico {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    width: 100%;
+}
+
+.button-grafico{
+    background-color: #4146A6;
+}
+
+.button-grafico-selecionado{
+    background-color: #999EF5;
+}
+
+.button-grafico, .button-grafico-selecionado {
+    border-radius: 14px;
+    border: 1px solid #000;
+    color: #fff;
+}
+
+.page-graficos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.graficos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #00051c;
+    height: 100%;
+    width: 75%;
+    border-radius: 14px;
+    border: 1px solid #fff;
+    padding: 10px;
+}
+
+.grafico1, .grafico2, .grafico3 {
+    display: flex;
+    flex-direction: row;
+    @media screen  {
+        
+    }
+}
+
+.grafico2, .grafico3 {
+    display: none;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.column > label {
+    font-size: 20px;
+    color: #fff;
+}
+
+.column-valor {
+    margin-bottom: 10px;
+    background: linear-gradient(180deg, #999EF5 27.92%, #FFFFFF 73.03%);
+    border-radius: 25px;
+    width: 50px;
+}
+label {
+    color: #fff;
+}
+
+.title{
+    align-self: flex-start;
+}

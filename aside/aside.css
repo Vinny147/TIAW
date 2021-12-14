@@ -1,0 +1,547 @@
+aside {
+    display: block;
+    border-radius: 60px;
+    height: calc(100% - 10px);
+    width: 350px;
+    margin: 5px;
+    background-color: #999EF5;
+    font-family: 'Poppins' , sans-serif;
+}
+
+
+/* sidebar menu */
+
+.sidebar_menu {
+    display: block; /*BLOCK*/
+    height: 100%;
+}
+
+.sidebar_menu_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.sidebar_menu img {
+    /*position: relative;*/
+    display: block;
+    border-radius: 50%;
+    height: 30%;
+    width: 30%;
+    margin-left: auto;
+    /*margin-bottom: auto;*/
+}
+
+.sidebar_menu_nome {
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sidebar_menu_nome h4, .sidebar_menu_nome p {
+    margin: 0;
+}
+
+.sidebar_menu_troca {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 75px;
+}
+
+.sidebar_menu_troca i:hover {
+    animation-duration: 0.2s;
+    color: #ddd;
+}
+
+.sidebar_menu i {
+    font-size: 200%;
+    /*max-height: 40px;*/
+}
+
+.sidebar_menu .bi-list {
+    font-size: 250%;
+}
+
+.sidebar_menu .bi-columns-gap {
+    transform: rotate(90deg);
+}
+
+.menu li:nth-of-type(2) i {
+    font-size: 220%;
+}
+
+.menu ul {
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    display: block;
+    width: 90%;
+    margin: 40px 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.menu div {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    padding: 0 25px;
+    cursor: pointer;
+}
+
+.menu div h4 {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.menu div:hover {
+    animation-duration: 0.2s;
+    color: #ddd;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu .pagina_ativa {
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.calendario-container {
+    overflow-y: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+::-webkit-scrollbar-track-piece:end {
+    margin-bottom: 10px;
+}
+
+#calendario {
+    width: 95%;
+    min-height: 300px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-areas:    "mes mes mes mes mes e d"
+                            "s1 s2 s3 s4 s5 s6 s7"
+                            "p0 p1 p2 p3 p4 p5 p6" 
+                            "p7 p8 p9 p10 p11 p12 p13"
+                            "p14 p15 p16 p17 p18 p19 p20" 
+                            "p21 p22 p23 p24 p25 p26 p27"
+                            "p28 p29 p30 p31 p32 p33 p34" 
+                            "p35 p36 . . . . .";
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.container-notas {
+    width: 95%;
+    min-height: 300px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.notas-header {
+    display: grid;
+    height: fit-content;
+    width: 100%;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas: "t t t t t e d";
+    justify-items: center;
+    align-items: center;
+}
+
+#notasBody {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: 80%;
+    /*word-wrap: break-all !important;
+    white-space: normal !important;*/
+    word-wrap: break-word;
+    cursor: default;
+}
+
+.notas-footer {
+    width: 100%;
+    /*height: 10%;*/
+    display: grid;
+    height: 10%;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 100%;
+    grid-template-areas: "data data data c e d";
+    justify-items: center;
+    align-items: center;
+}
+
+.dataNota {
+    display: grid;
+    grid-area: data;
+}
+
+.notas-footer .bi-journal-plus {
+    display: grid;
+    grid-area: c;
+    font-size: 24px;
+}
+
+.notas-footer .bi-pencil-square {
+    display: grid;
+    grid-area: e;
+    font-size: 24px;
+}
+
+.notas-footer .bi-trash {
+    display: grid;
+    grid-area: d;
+    font-size: 24px;
+}
+
+#tituloNota {
+    width: 100%;
+    grid-area: t;
+    justify-self: center;
+    align-self: center;
+    word-wrap: break-word;
+}
+
+#semNotas {
+    display: grid;
+    place-items: center;
+}
+
+#semNotas h5 {
+    text-align: center;
+}
+
+#semNotas .bi-journal-plus:hover {
+    cursor: pointer;
+    color: #ccc;
+}
+
+#blocoDeNotas {
+    width: 100%;
+    min-height: 300px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    resize: none;
+}
+
+#blocoDeNotas:focus {
+    outline: none;
+}
+
+#blocoDeNotas::placeholder {
+    color: #444;
+}
+
+#mesAno  {
+    color: #000;
+    justify-self: center;
+    align-self: center;
+    grid-area: mes;
+    margin: 0;
+}
+
+.calendario-container .bi-caret-left {
+    color: #000;
+    font-size: 20px;
+    justify-self: center;
+    align-self: center;
+    grid-area: e;
+}
+
+.calendario-container .bi-caret-right {
+    color: #000;
+    font-size: 20px;
+    justify-self: center;
+    align-self: center;
+    grid-area: d;
+}
+
+.calendario-container .bi-caret-left:hover, .calendario-container .bi-caret-right:hover, 
+.notas-footer .bi-journal-plus:hover, .notas-footer .bi-pencil-square:hover, .notas-footer .bi-trash:hover {
+    cursor: pointer;
+    color: #ccc;
+}
+
+.calDiaSem {
+    color: #000;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.circulo-calendario {
+    height: 32px;
+    width: 32px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.circulo-calendario h5 {
+    color: #000;
+    font-style: normal;
+    padding: auto;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.circulo-calendario:hover, .circulo-calendario:hover h5 {
+        cursor: pointer;
+        color: #ccc;
+        border-color: #ccc;
+}
+
+.diaSem:nth-of-type(1){
+    grid-area: s1;
+}
+
+#containerInputNotas {
+    margin-top: 30px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    /*display: grid;
+    grid-auto-rows: 1fr 5fr 1fr;
+    grid-auto-columns: 50% 50%;
+    grid-template-areas:"t t"
+                        "d d"
+                        "b1 b2";*/
+}
+
+#containerInputNotas > *{
+    margin-bottom: 5px;
+}
+
+#containerInputNotas input {
+    height: 30px;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #000;
+}
+
+#containerInputNotas input:first-of-type:focus {
+    outline: none;
+}
+
+#containerInputNotas input:first-of-type::placeholder {
+    color: #444;
+}
+
+.input-notas-footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#containerInputNotas .input-notas-footer input {
+    width: 100px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #444;
+}
+
+#containerInputNotas .input-notas-footer input:hover {
+    color: #ccc;
+}
+
+#avisoCal {
+    display: grid;
+    color: #000;
+    justify-self: center;
+    align-self: center;
+}
+
+/*#containerInputNotas label:first-of-type, #containerInputNotas input:first-of-type {
+    grid-area: t;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}*/
+
+#asideBody {
+    height: 63%;
+}
+
+@media screen and (max-width: 1080px) {
+
+    aside {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 920px) {
+
+    aside {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: fit-content;
+        border-radius: 0;
+        margin: 0;
+        padding: 5px 0;
+    }
+
+    .sidebar_menu {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-radius: 0;
+        height: fit-content;
+    }
+
+    /*.sidebar_menu div {
+        border: 1px solid red;
+    }*/
+
+    .sidebar_menu_header {
+        order: 2;
+        width: 70%;
+        margin: 5px 0;
+        padding: 0;
+        justify-content: space-evenly;
+    }
+
+    .sidebar_menu_troca {
+        order: 1;
+        width: 30%;
+        margin: 0;
+        justify-content: space-evenly;
+    }
+
+    #asideBody {
+        order: 3;
+    }
+    
+    /*.menu {
+        order: 3;
+        transition: all 0.5s ease-in;
+    }*/
+
+    .sidebar_menu_nome p, .sidebar_menu_nome h4 {
+        margin: 0;
+        width: fit-content;
+    }
+
+    .sidebar_menu_header img {
+        margin: 0;
+        margin-right: 10px;
+        height: 100px;
+        width: 100px;
+        object-fit:cover;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: space-evenly;
+    }
+
+    .menu ul li {
+        width: 45%;
+        min-width: 300px;
+        height: fit-content;
+        margin: 15px 5px;
+    }
+
+    aside {
+        max-height: 100%;
+        padding: 0;
+    }
+
+    .sidebar_menu {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    /*#calendarioContainer {
+        max-height: 100%;
+        overflow-y: auto;
+    }*/
+
+    #asideBody {
+        margin: 0 auto;
+        padding-top: 10px;
+        height: calc(100% - 110px);
+        width: 350px;
+        overflow-y: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar_menu_header img {
+        height: auto;
+        width: 30%;
+    }
+    .sidebar_menu_nome {
+        align-content: space-between;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    
+    .sidebar_menu {
+        justify-content: space-evenly;
+    }
+    
+    .sidebar_menu_nome {
+        display: none;
+    }
+
+    .sidebar_menu_troca {
+        width: 65%;
+    }
+
+    .sidebar_menu_troca i {
+        font-size: 48px;
+    }
+
+    #menuToggle {
+        font-size: 60px;
+    }
+
+    .sidebar_menu_header {
+        width: 35%;
+    }
+
+    .sidebar_menu_header img {
+        height: auto;
+        width: 72px;
+        margin-right: 40px;
+    }
+}

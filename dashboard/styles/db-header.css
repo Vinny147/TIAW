@@ -1,0 +1,110 @@
+.dashboard_flex header {
+    display: flex;
+    align-items: center;
+    /*justify-content: space-evenly;*/
+    height: 130px;
+    background-color: #4146A6;
+    padding: 0 30px;
+}
+
+.dashboard_cabecalho {
+    display: block;
+    border-radius: 60px;
+    margin: 5px;
+    margin-bottom: 0;
+    margin-right: 0;
+    font-family: 'Maven Pro' , sans-serif;
+}
+
+.dashboard_flex header .semana {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+.semana h4 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.semana h6 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+header .dias_semana {
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+header .dias_semana ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    font-family: 'Poppins' , sans-serif;
+    font-size: 50px;
+    color: #fff;
+}
+
+header .dias_semana ul li {
+    display: block;
+    margin: auto;
+}
+
+header .dias_semana ul li{
+    color: #fff;
+    text-decoration: none;
+}
+
+header .dias_semana ul li:hover {
+    cursor: pointer;
+    animation-duration: 0.2s;
+    color: #ccc;
+}
+
+header .dias_semana ul .dia_atual {
+    display: flex;
+    height: 75px;
+    width: 75px;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 1080px) {
+
+    header.dashboard_cabecalho {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+
+    header.dashboard_cabecalho {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    
+    .semana, .semana * {
+        display: none;
+    }
+
+    .dashboard_flex header {
+        padding: 0 2%;
+    }
+
+    header .dias_semana {
+        width: 100%;
+    }
+}

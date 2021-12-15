@@ -35,8 +35,133 @@
                 </div>
             </header>
             <div class="conteudo_dashboard">
-                <div class="barra_habitos">
+                 <!-- Inicio Barra Hábito -->
+
+                 <div class="barra_habitos">
+                    
+                    <!-- Primeiro -->
+
                     <div class="habito r1 habito_ler">
+                        
+                        <div id="circulo_barra_habito_1">
+
+                            <div class="circulo_barra" onclick="atualiza_circulo_barra_habito('icon_check_1', 0)">
+                                <img src="../resources/icon_check.svg" alt="icon_check" id="icon_check_1">
+                            </div>
+
+                        </div>
+
+                        <h5> 
+                            <label id="barra_habito_1" class="barra_habito_elementos"
+                            data-toggle="modal" data-target="#meuModal"
+                            onclick="armazena_clique_temp('barra_habito_1',0)">
+
+                            </label>
+                        </h5>
+
+                    </div>
+
+                    <!-- Segundo -->
+
+                    <div class="habito r1 habito_agua">
+
+                        <div id="circulo_barra_habito_2" >
+
+                            <div class="circulo_barra" onclick="atualiza_circulo_barra_habito('icon_check_2', 1)">
+                                <img src="../resources/icon_check.svg" alt="icon_check" id="icon_check_2">
+                            </div>
+
+                        </div>
+
+                        <h5>
+                            <label id="barra_habito_2" class="barra_habito_elementos"
+                            data-toggle="modal" data-target="#meuModal"
+                            onclick="armazena_clique_temp('barra_habito_2',1)">
+
+                        </h5>
+
+                    </div>
+
+                    <!-- Terceiro -->
+
+                    <div class="habito r1 habito_estudar">
+                        
+                        <div id="circulo_barra_habito_3">
+
+                            <div class="circulo_barra" onclick="atualiza_circulo_barra_habito('icon_check_3', 2)">
+                                <img src="../resources/icon_check.svg" alt="icon_check" id="icon_check_3">
+                            </div>
+
+                        </div>
+
+                        <h5>
+                            <label id="barra_habito_3" class="barra_habito_elementos"
+                            data-toggle="modal" data-target="#meuModal"
+                            onclick="armazena_clique_temp('barra_habito_3',2)">
+
+                            </h5>
+
+                    </div>
+
+                    <!-- Quarto -->
+
+                    <div class="habito r2 habito_exercicios">
+
+                        <div id="circulo_barra_habito_4">
+
+                            <div class="circulo_barra" onclick="atualiza_circulo_barra_habito('icon_check_4', 3)">
+                                <img src="../resources/icon_check.svg" alt="icon_check" id="icon_check_4">
+                            </div>
+
+                        </div>
+
+                        <h5>
+                            <label id="barra_habito_4" class="barra_habito_elementos"
+                            data-toggle="modal" data-target="#meuModal"
+                            onclick="armazena_clique_temp('barra_habito_4',3)">
+
+                        </h5>
+
+                    </div>
+
+                    <!-- Quinto -->
+                    <div class="habito r2 habito_meditar">
+
+                        <div id="circulo_barra_habito_5">
+
+                            <div class="circulo_barra" onclick="atualiza_circulo_barra_habito('icon_check_5', 4)">
+                                <img src="../resources/icon_check.svg" alt="icon_check" id="icon_check_5">
+                            </div>
+
+                        </div>
+
+                        <h5>
+                            <label id="barra_habito_5" class="barra_habito_elementos"
+                            data-toggle="modal" data-target="#meuModal"
+                            onclick="armazena_clique_temp('barra_habito_5',4)">
+
+                        </h5>
+
+                    </div>
+
+                    <!-- ADD -->
+
+                    <div class="habito r2 habito_adc">
+                        
+                        <div class="adc">
+
+                            <i class="bi bi-plus-circle"
+                            data-toggle="modal" data-target="#modal_nova_tarefa"></i>
+
+                        </div>
+
+                        <h5>Adc.</h5>
+
+                    </div>
+
+                </div>
+                    
+                    <!--<div class="habito r1 habito_ler">
                         <div>
                             <a href="#">
                                 <i class="bi bi-circle"></i>
@@ -83,8 +208,7 @@
                             </a>
                         </div>
                         <h5>Adc.</h5>
-                    </div>
-                </div>
+                    </div>-->
                 <div id="modal-container">
                     <div class="adc-tarefas">
                         <div class="modal-header">

@@ -12,9 +12,9 @@ if (localStorage.getItem('db_usuarios') === null) {
 } else if (!objUsuario()) window.location.replace('../login/login.html');
 
 $.when( // função para carregar demais scripts
-    $.getScript('/Codigo/aside/aside.js'),
-    $.getScript('/Codigo/dashboard/scripts/tasks.js'),
-    $.getScript('/Codigo/dashboard/scripts/habitos.js'),
+    $.getScript('../aside/aside.js'),
+    $.getScript('./scripts/tasks.js'),
+    $.getScript('./scripts/habitos.js'),
     $.Deferred(function( deferred ){
         $( deferred.resolve );
     })
@@ -30,6 +30,8 @@ $.when( // função para carregar demais scripts
         filtraTarefasPorDiaSemana();
         atualizaBarraSemana();
         carregaAlarme();
+        adiciona_info_barra_habito();
+        inicia_barra_habito_circulos();
         setInterval(atualizaBarraSemana, tempoMin);
         toggleAside();
         if (window.screen.width <= 920 || document.body.clientWidth <= 920) {

@@ -11,19 +11,19 @@ function carregaUsuario() { //pega o id do usuario logado que foi passado para a
     let objDadosConfig = leDadosConfigAtual();
     if(objDadosConfig) if (objDadosConfig.imgPerfil) document.getElementById('imgPerfil').src = objDadosConfig.imgPerfil;
     document.getElementById('btnDashboard').addEventListener('click', () => {
-        if (window.location.pathname === '/Codigo/dashboard/dashboard.html#' + idUsuarioAtual) return;
-        window.location.replace('/Codigo/dashboard/dashboard.html#' + idUsuarioAtual);
+        if (window.location.pathname === '/TIAW/Codigo/dashboard/dashboard.html#' + idUsuarioAtual) return;
+        window.location.replace('/TIAW/Codigo/dashboard/dashboard.html#' + idUsuarioAtual);
     });
     document.getElementById('btnGrafico').addEventListener('click', () => {
-        if (window.location.pathname === '/Codigo/estatisticas/estatisticas.html#' + idUsuarioAtual) return;
-        window.location.replace('/Codigo/estatisticas/estatisticas.html#' + idUsuarioAtual);
+        if (window.location.pathname === '/TIAW/Codigo/estatisticas/estatisticas.html#' + idUsuarioAtual) return;
+        window.location.replace('/TIAW/Codigo/estatisticas/estatisticas.html#' + idUsuarioAtual);
     });
     document.getElementById('btnConfig').addEventListener('click', () => {
-        if (window.location.pathname === '/Codigo/config/config.html#' + idUsuarioAtual) return;
-        window.location.replace('/Codigo/config/config.html#' + idUsuarioAtual);
+        if (window.location.pathname === '/TIAW/Codigo/config/config.html#' + idUsuarioAtual) return;
+        window.location.replace('/TIAW/Codigo/config/config.html#' + idUsuarioAtual);
     });
     document.getElementById('btnSair').addEventListener('click', () => {
-        window.location.replace('../login/login.html');
+        window.location.replace('/TIAW/Codigo/login/login.html');
     });
 }
 

@@ -20,7 +20,7 @@ $.when( // função para carregar demais scripts
     })
 ).done(function(){   
     window.onload = () => {
-        //carregaMainContent();
+        window.location.href = window.location.href;
         carregaUsuario();
         lerTarefas();
         salvarDados(lerTarefas(), 'dbTarefas');

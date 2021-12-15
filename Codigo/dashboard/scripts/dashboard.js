@@ -7,7 +7,7 @@ const objUsuario = function() {
     return usuario;
 }
 
-if (localStorage && localStorage.getItem('db_usuarios') === null) {
+if (localStorage.length && localStorage.getItem('db_usuarios') === null) {
     window.location.replace('../login/login.html');
 } else if (!objUsuario()) window.location.replace('../login/login.html');
 
@@ -20,7 +20,7 @@ $.when( // função para carregar demais scripts
     })
 ).done(function(){   
     window.onload = () => {
-        //carregaMainContent();
+        window.location.href = window.location.href;
         carregaUsuario();
         lerTarefas();
         salvarDados(lerTarefas(), 'dbTarefas');
@@ -39,32 +39,6 @@ $.when( // função para carregar demais scripts
         }
     }
 });
-
-/*function checkPage() {
-    
-    switch(window.location.pathname) {
-        case '/dashboard/dashboard.html':
-            document.getElementById('btnDashboard').classList.add('pagina_ativa');
-            break;
-    }
-}*/
-
-/*setInterval(() => {
-    tempoAtual = geraTempo();
-}, 1000);*/
-
-/*function toggleDropdownMenu() {
-    
-}
-let menuDd = document.getElementById('menuToggle');
-window.addEventListener('resize', () => {
-    if (window.innerWidth <= 920 && !objMenu.classList.contains('hide')) {
-        objMenu.classList.add('hide');
-    }
-});
-
-menuDd.addEventListener('click', toggleDropdownMenu);
-*/
 
 function formatTime(time) {
     if (time < 10) {

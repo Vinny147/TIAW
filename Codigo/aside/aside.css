@@ -392,6 +392,12 @@ aside {
     align-items: flex-start;
 }*/
 
+#imgPerfil {
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+}
+
 #asideBody {
     height: 63%;
 }
@@ -510,6 +516,11 @@ aside {
     }
     .sidebar_menu_nome {
         align-content: space-between;
+    }
+
+    #imgPerfil {
+        height: 80px;
+        width: 80px;
     }
 }
 

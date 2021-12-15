@@ -1,4 +1,4 @@
-var idUsuarioAtual = window.location.hash.split('#')[1];
+var qtdClicksTrocaMes = 0, addAno = 1, idUsuarioAtual = window.location.hash.split('#')[1];
 const msDia = 86400000;
 
 if (localStorage.getItem('db_usuarios') === null || idUsuarioAtual === undefined) {
@@ -319,8 +319,6 @@ function carregaDadosAno() {
     let tarefasAConcluir = objTarefasUsuario.tarefas.filter(obj => obj.check != true && (new Date() < new Date(obj.data)));
     
     for (let i = 0; i < 12; i++) {
-        /*if (j > new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0).getDate()) 
-            j = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0).getDate();*/
         qtdConcluidoAno[i] = tarefasConcluidas.filter(function (obj) {
             if (new Date(obj.data).getFullYear() === new Date().getFullYear())
                 if (new Date(obj.data).getMonth() === i) return obj;

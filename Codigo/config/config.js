@@ -187,7 +187,6 @@ function salvaConfig(novaImgSrc, infoUsuarioAlterada) {
         let dbConfig = [
                 objDadosConfig
         ];
-        console.log(dbConfig);
         salvarDados(dbConfig, 'dbConfigs');
     }
     carregaConfig();

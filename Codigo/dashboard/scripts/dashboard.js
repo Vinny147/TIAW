@@ -1,14 +1,20 @@
 var indiceDbUsuarios, indiceDbTarefas = 0, indiceDbNotas = 0, tempoMin = calculaTempoMin(), qtdClicksTrocaMes = 0, addAno = 1,
     idUsuarioAtual = window.location.hash.split('#')[1];
 
-if (localStorage.getItem('db_usuarios') === null || idUsuarioAtual === undefined /*comentei por agr pra n ficar dando redirect td hr*/) {
-    window.location.replace('../login/login.html');
+const objUsuario = function() {
+    let dbUsuarios = JSON.parse(localStorage.getItem('db_usuarios'));
+    let usuario = dbUsuarios.usuarios.find(obj => obj.id === idUsuarioAtual);
+    return usuario;
 }
 
+if (localStorage.getItem('db_usuarios') === null) {
+    window.location.replace('../login/login.html');
+} else if (!objUsuario()) window.location.replace('../login/login.html');
+
 $.when( // função para carregar demais scripts
-    $.getScript('../../aside/aside.js'),
-    $.getScript('/dashboard/scripts/tasks.js'),
-    $.getScript('/dashboard/scripts/habitos.js'),
+    $.getScript('/Codigo/aside/aside.js'),
+    $.getScript('/Codigo/dashboard/scripts/tasks.js'),
+    $.getScript('/Codigo/dashboard/scripts/habitos.js'),
     $.Deferred(function( deferred ){
         $( deferred.resolve );
     })

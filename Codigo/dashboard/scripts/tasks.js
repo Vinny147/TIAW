@@ -105,13 +105,13 @@ function toggleDdTarefasOff() {
     divFuncoes.classList.remove('funcoes-active');
     ddTarefa.classList.remove('tarefa-active');*/
 
-    ddTarefa.children[1].style.height = '64px';
-    ddTarefa.children[1].children[0].style.minHeight = 'auto';
+    ddTarefa.children[1].style.height = '72px';
+    ddTarefa.children[1].children[0].style.minHeight = '38px';
     ddTarefa.children[1].children[0].style.whiteSpace = 'nowrap'
     ddTarefa.children[1].children[0].style.marginBottom = '0';
     ddTarefa.children[1].children[1].style.whiteSpace = 'nowrap';
     ddTarefa.children[1].children[1].style.maxHeight = '65%';
-    ddTarefa.children[1].children[1].style.minHeight = 'auto';
+    ddTarefa.children[1].children[1].style.minHeight = '30px';
 
     ddTarefa.classList.remove('tarefa-active');
     //ddTarefa.style.Height = `${ddTarefa.clientHeight / 3}px`;

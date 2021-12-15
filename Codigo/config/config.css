@@ -40,6 +40,8 @@ h5 {
 
 #cfgImg {
     object-fit:cover;
+    width: 286px;
+    height: 286px;
 }
 
 .config-input-footer {

@@ -12,9 +12,9 @@ if (localStorage.getItem('db_usuarios') === null) {
 } else if (!objUsuario()) window.location.replace('../login/login.html');
 
 $.when( // função para carregar demais scripts
-    $.getScript('./Codigo/aside/aside.js'),
-    $.getScript('./Codigo/dashboard/scripts/tasks.js'),
-    $.getScript('./Codigo/dashboard/scripts/habitos.js'),
+    $.getScript('TIAW/Codigo/aside/aside.js'),
+    $.getScript('TIAW/Codigo/dashboard/scripts/tasks.js'),
+    $.getScript('TIAW/Codigo/dashboard/scripts/habitos.js'),
     $.Deferred(function( deferred ){
         $( deferred.resolve );
     })

@@ -9,6 +9,89 @@ h5 {
     margin: 0;
 }
 
+h1, button {
+    color: #212529;
+}
+
 #mainContent {
-    padding: 5px;
+    padding:  0;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    /*background-color: #fdfdfd;*/
+    overflow-y: auto;
+    border-radius: 50px;
+    display: grid;
+    grid-auto-rows: 2fr 1fr 0.5fr 6fr;
+    grid-auto-columns: 1fr;
+    grid-template-areas: '. t .'
+                         's m a'
+                         'g g g';
+}
+
+#nomeGrafico, #btnGraficoSem, #btnGraficoMes, #btnGraficoAno {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    text-justify: center;
+    margin: auto;
+}
+
+#btnGraficoSem, #btnGraficoMes, #btnGraficoAno {
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #999EF5;
+    font-size: 24px;
+}
+
+#btnGraficoSem:focus, #btnGraficoMes:focus, #btnGraficoAno:focus {
+    outline: none;
+}
+
+.btn-ativo {
+    color: #fdfdfd;
+    background-color: #4146A6 !important;
+}
+
+#nomeGrafico {
+    grid-area: t;
+}
+
+#btnGraficoSem {
+    grid-area: s;
+}
+
+#btnGraficoMes {
+    grid-area: m;
+}
+
+#btnGraficoAno {
+    grid-area: a;
+}
+
+#graficoContainer {
+    grid-area: g;
+    margin: 25px;
+}
+
+#msg {
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        display: block;
+    }
+
+    #btnGraficoSem, #btnGraficoMes, #btnGraficoAno, #nomeGrafico {
+        margin: 10px auto;
+    }
 }

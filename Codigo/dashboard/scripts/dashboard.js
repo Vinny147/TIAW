@@ -7,7 +7,7 @@ const objUsuario = function() {
     return usuario;
 }
 
-if (localStorage.getItem('db_usuarios') === null) {
+if (localStorage && localStorage.getItem('db_usuarios') === null) {
     window.location.replace('../login/login.html');
 } else if (!objUsuario()) window.location.replace('../login/login.html');
 
